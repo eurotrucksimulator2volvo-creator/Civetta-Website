@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Automobili Civetta | The pinnacle of Italian automotive engineering
-    </title>
+    <title>Automobili Civetta | The pinnacle of Italian automotive engineering</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-image: url("https://static.wikia.nocookie.net/beamng/images/d/d1/Civetta_logo.png/revision/latest?cb=20200501195911");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      nav {
+        background-color: rgba(17, 17, 17, 0.85);
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      nav a {
+        color: rgb(226, 146, 17);
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #3f2095;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .hero-content {
+        background: rgba(0, 0, 0, 0.55);
+        padding: 30px 40px;
+        border-radius: 10px;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .content {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #111;
+        margin: 20px;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
-    <p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmaS4ijEXlD5YHU9GDDdy6SMMWPm2V3HR4dXBDwTsl_jCUHJ2D8kZNlXg&s=10>" alt="An image of a Civetta Scintilla.">
-      <h1>
-        The Pinnacle of Italian Automotive Engineering
-      </h1>
-      Here at Civetta, we are dedicated to crafting the most exotic machines money can buy.
-    </p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="scintilla.html">Scintilla</a>
+      <a href="#">About</a>
+      <a href="#">Models</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>The Pinnacle of Italian Automotive Engineering</h1>
+        <p>Here at Civetta, we are dedicated to crafting the most exotic machines money can buy.</p>
+      </div>
+    </section>
+
+    <div class="content">
+      <h2>Explore the Scintilla</h2>
+      <p>The Civetta Scintilla is a masterpiece of Italian design and engineering, combining cutting-edge technology with the timeless elegance that defines the brand.</p>
+      <a href="scintilla.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmaS4ijEXlD5YHU9GDDdy6SMMWPm2V3HR4dXBDwTsl_jCUHJ2D8kZNlXg&s=10" alt="Civetta Scintilla" style="width:100%; max-width:600px; margin-top:20px; border-radius:10px;">
+      </a>
+    </div>
+
+    <div class="content">
+      <h2>The Bolide</h2>
+      <p>From the 1980s, the Bolide stands as an important chapter in Civetta’s history, reflecting the era’s broader fascination with dramatic design and high-performance ideals.</p>
+      <a href="bolide.html">Read the historical note</a>
+    </div>
   </body>
 </html>
