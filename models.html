@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Models | Automobili Civetta</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZbNVUKGYIxNRhTZaXTTAheaQD-J0e12JCE6ZgSvesXfcFyu4SrAG6e_Jm&s=10");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+        line-height: 1.7;
+      }
+
+      .hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .hero-content {
+        background: rgba(0, 0, 0, 0.55);
+        padding: 30px 40px;
+        border-radius: 12px;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto 40px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 12px;
+        backdrop-filter: blur(6px);
+        margin-bottom: 0;
+      }
+
+      .card a {
+        color: rgb(226, 146, 17);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="models.html">Models</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Our Models</h1>
+        <p>Explore the two defining chapters of the Civetta story.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="card">
+        <h2>The Scintilla</h2>
+        <p>For the modern era of performance, the Scintilla represents the height of Civetta ambition with a futuristic, high-output character.</p>
+        <p><a href="scintilla.html">View Scintilla</a></p>
+      </div>
+
+      <div class="card">
+        <h2>The Bolide</h2>
+        <p>The Bolide captures the dramatic styling and theatrical spirit of 1980s Civetta design.</p>
+        <p><a href="bolide.html">View Bolide</a></p>
+      </div>
+    </div>
+  </body>
+</html>

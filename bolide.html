@@ -2,73 +2,53 @@
 <html>
   <head>
     <title>Bolide | Automobili Civetta</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        font-family: Georgia, serif;
+        font-family: Arial, sans-serif;
         margin: 0;
-        background: #111;
-        color: #f2e8cf;
+        background: linear-gradient(to bottom, #111, #2b1b4d);
+        color: white;
         line-height: 1.7;
       }
 
-      nav {
-        background-color: #1a1a1a;
-        padding: 15px 20px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-      }
-
-      nav a {
-        color: #d9b44a;
-        text-decoration: none;
-        margin-right: 20px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #fff;
-      }
-
-      .page {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 40px 20px 80px;
-      }
-
       .hero {
-        border-bottom: 1px solid #5a4c2f;
-        padding-bottom: 20px;
-        margin-bottom: 25px;
+        min-height: 100vh;
+        background-image: url("https://preview.redd.it/the-better-civetta-v0-pnx0bot3qhbd1.jpg?width=640&crop=smart&auto=webp&s=dc72578253220fffa8901af29223a433f2cbfc90");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
       }
 
-      .hero h1 {
-        font-size: 2.2em;
-        margin-bottom: 8px;
+      .hero-content {
+        background: rgba(0, 0, 0, 0.55);
+        padding: 30px 40px;
+        border-radius: 12px;
+        max-width: 700px;
+        text-align: center;
       }
 
-      .hero p {
-        font-size: 1.05em;
-        color: #d7caa8;
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
       }
 
-      .content {
-        background: rgba(255, 255, 255, 0.04);
-        padding: 24px;
-        border-radius: 8px;
-        border: 1px solid #3a3122;
-      }
-
-      .content h2 {
-        color: #f0c96b;
-        font-size: 1.2em;
-        margin-top: 0;
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 12px;
+        backdrop-filter: blur(6px);
       }
 
       .quote {
         font-style: italic;
-        color: #cdbb8a;
-        border-left: 3px solid #8c6f2c;
+        color: #e8d8b0;
+        border-left: 3px solid rgb(226, 146, 17);
         padding-left: 14px;
         margin: 18px 0;
       }
@@ -77,23 +57,46 @@
   <body>
     <nav>
       <a href="index.html">Home</a>
-      <a href="scintilla.html">Scintilla</a>
-      <a href="bolide.html">Bolide</a>
+      <a href="models.html">Models</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
 
-    <div class="page">
-      <div class="hero">
+    <section class="hero">
+      <div class="hero-content">
         <h1>The Civetta Bolide</h1>
         <p>A historical model from the 1980s, remembered as a striking expression of late-century Italian automotive ambition.</p>
       </div>
+    </section>
 
-      <div class="content">
+    <div class="container">
+      <div class="card">
         <h2>Historical Note</h2>
         <p>The Bolide emerged during an era when automotive design was becoming increasingly theatrical, and Civetta’s work reflected that shift with bold lines and a strong sense of character.</p>
+
+        <p class="quote">"The car slides as if it was on ice." — Antonio Civetta</p>
 
         <p class="quote">It was not merely a car of its time, but a record of the ambitions and tastes of an era that prized spectacle as much as performance.</p>
 
         <p>In historical perspective, the Bolide stands less as a modern performance machine and more as a cultural artifact: a reminder of how designers once imagined speed, style, and prestige in a very different language.</p>
+
+        <h3 style="margin-top: 16px; margin-bottom: 8px; color: rgb(226, 146, 17);">Specifications</h3>
+        <dl class="spec-list">
+          <dt>Engine</dt>
+          <dd>3.5 L V8</dd>
+          <dt>Power</dt>
+          <dd>260 hp</dd>
+          <dt>0-100 km/h</dt>
+          <dd>Approximately 5.4 seconds</dd>
+          <dt>Top Speed</dt>
+          <dd>267 km/h</dd>
+          <dt>Years</dt>
+          <dd>1981-1988</dd>
+        </dl>
+
+        <p style="font-size: 0.9em; color: #ddd; margin-top: 15px;">
+          <em>Specifications are taken from the USDM Coupé trim.</em>
+        </p>
       </div>
     </div>
   </body>
