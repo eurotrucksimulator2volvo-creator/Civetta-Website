@@ -6,9 +6,9 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="scintilla.html">Scintilla</a>
-      <a href="#">About</a>
-      <a href="#">Models</a>
-      <a href="#">Contact</a>
+      <a href="about.html">About</a>
+      <a href="models.html">Models</a>
+      <a href="contact.html">Contact</a>
     </nav>
   `;
 })();

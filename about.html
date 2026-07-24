@@ -1,8 +1,110 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            About | Automobili Civetta
-        </title>
-    </head>
+  <head>
+    <title>About | Automobili Civetta</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-image: url("https://static.wikia.nocookie.net/beamng/images/d/d1/Civetta_logo.png/revision/latest?cb=20200501195911");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      .hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .hero-content {
+        background: rgba(0, 0, 0, 0.65);
+        padding: 30px 40px;
+        border-radius: 12px;
+        max-width: 760px;
+        text-align: center;
+      }
+
+      .content {
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.92);
+        color: #111;
+        margin: 20px;
+        border-radius: 12px;
+      }
+
+      .content h2 {
+        color: #111;
+        margin-top: 0;
+      }
+
+      .section-row {
+        display: grid;
+        gap: 24px;
+      }
+
+      .section-row img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      @media (min-width: 800px) {
+        .section-row {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="models.html">Models</a>
+      <a href="about.html">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>About Automobili Civetta</h1>
+        <p>Crafting iconic Italian performance machines inspired by heritage, passion, and innovation.</p>
+      </div>
+    </section>
+
+    <div class="content">
+      <h2>Our Story</h2>
+      <p>Automobili Civetta began when Antonio Civetta, a successful tractor manufacturer, after purchasing several Burnside vehicles, became dissatisfied with the frequent clutch failures and Bruckell's toxicity. He set out to create his own line of superior automobiles.</p>
+      <p>From the iconic Bolide to the ultra-modern Scintilla, our vehicles are designed to deliver emotion, prestige, and unforgettable performance.</p>
+    </div>
+
+    <div class="content section-row">
+      <div>
+        <h2>Design Philosophy</h2>
+        <p>We believe design should captivate from every angle. Every line, surface, and detail is crafted to create a powerful visual signature while enhancing aerodynamic performance.</p>
+      </div>
+      <div>
+        <h2>Engineering Excellence</h2>
+        <p>Our engineers focus on precision, balance, and driver engagement. Lightweight construction, powerful drivetrains, and refined chassis tuning make Civetta cars as compelling on the road as they are on the track.</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>The Civetta Legacy</h2>
+      <div class="section-row">
+        <div>
+          <p>At Civetta, every car is part of a legacy built on ambition and craftsmanship. We invite collectors and enthusiasts to experience the bold spirit of a brand that embraces tradition while shaping the future of performance automobiles.</p>
+          <p>Explore our models to see how Civetta reinterprets Italian luxury for a modern audience.</p>
+        </div>
+        <div>
+          <img src="https://static.wikia.nocookie.net/beamng/images/7/71/Screenshot_2024-11-07_13-20-47.png/revision/latest/scale-to-width-down/1000?cb=20241107123858" alt="Civetta Bolide" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
