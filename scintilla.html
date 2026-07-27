@@ -7,13 +7,13 @@
       body {
         font-family: Arial, sans-serif;
         margin: 0;
-        background: linear-gradient(to bottom, #111, #2b1b4d);
+        background: linear-gradient(to bottom, #3e0000, #000000);
         color: white;
       }
 
       .hero {
         min-height: 100vh;
-        background-image: url("https://preview.redd.it/some-loading-screen-images-v0-1gztg8ght2dh1.png?width=1080&crop=smart&auto=webp&s=97dfbda1d8626c59a6f2cfddd15dc387f0901393");
+        background-image: url("https://d.player.one/en/full/212272/civetta-scintilla.png");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -44,11 +44,31 @@
         backdrop-filter: blur(6px);
       }
 
+      .disclaimer {
+        font-size: 0.8em;
+        color: #ddd;
+        margin-top: 10px;
+      }
+
       img {
         width: 100%;
         max-width: 700px;
         border-radius: 12px;
         margin-top: 20px;
+      }
+
+      .trim-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 20px 0 30px;
+      }
+
+      .trim-box {
+        min-height: 320px;
+        border: 2px dashed rgba(255, 255, 255, 0.35);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
       }
     </style>
   </head>
@@ -56,7 +76,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="models.html">Models</a>
-      <a href="#">About</a>
+      <a href="about.html">About</a>
       <a href="#">Contact</a>
     </nav>
 
@@ -85,6 +105,36 @@
           <em>Disclaimer: Specifications are taken from the GTx model. Varies by trim.</em>
         </p>
       </div>
+      <div class="card">
+        <h2>Powertrain</h2>
+        <p>The Scintilla's powertrain is a masterpiece of engineering, combining the raw power of its 5.0LV8 twin-turbo engine with a seven-speed dual-clutch transmission and an electronic Clutchex AWD system* for an exhilarating driving experience.</p>
+        <img src="https://static.wikia.nocookie.net/beamng/images/f/fd/Scintilla_enginebay.jpeg/revision/latest/scale-to-width-down/1000?cb=20250227092137" alt="Civetta Scintilla Engine Bay" />
+        <p class="disclaimer">*Disclaimer: The Clutchex AWD system is only available on higher trims and may vary in performance based on driving conditions.</p>
+      </div>
     </div>
+
+    <div class="trim-grid" style="max-width: 900px; margin: 20px auto 40px;">
+      <div class="trim-box">
+        <h3>GT</h3>
+        <img src="https://static.wikia.nocookie.net/beamng/images/2/21/Gt_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GT" style="width:100%; border-radius: 12px; margin-top: 10px;" />
+      </div>
+      <div class="trim-box">
+        <h3>GTx</h3>
+        <img src="https://static.wikia.nocookie.net/beamng/images/8/8a/Gtx_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GTx" style="width:100%; border-radius: 12px; margin-top: 10px;" />
+      </div>
+      <div class="trim-box">
+        <h3>GTs</h3>
+        <img src="https://static.wikia.nocookie.net/beamng/images/3/3a/Rt_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GTs" style="width:100%; border-radius: 12px; margin-top: 10px;" />
+      </div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+      <div class="trim-box"></div>
+    </div>
+    <h1 style="text-align: center; margin-bottom: 40px;">Read our official brochure <a href="https://www.beamng.com/civetta-scintilla-brochure-small.pdf">here</a>.</h1>
   </body>
 </html>
