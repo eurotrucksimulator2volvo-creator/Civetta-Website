@@ -57,18 +57,70 @@
         margin-top: 20px;
       }
 
-      .trim-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        margin: 20px 0 30px;
+      .trim-tabs {
+        max-width: 900px;
+        margin: 20px auto 40px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
       }
 
-      .trim-box {
-        min-height: 320px;
-        border: 2px dashed rgba(255, 255, 255, 0.35);
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.06);
+      .tab-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tab-button {
+        appearance: none;
+        border: 1px solid transparent;
+        background: rgba(255, 255, 255, 0.08);
+        color: #f5f5f5;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 180ms ease;
+      }
+
+      .tab-button:hover,
+      .tab-button:focus-visible {
+        background: rgba(255, 255, 255, 0.15);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+      }
+
+      .tab-button[aria-selected="true"] {
+        background: #ffffff;
+        color: #111;
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .tab-panels {
+        min-height: 360px;
+      }
+
+      .tab-panel {
+        display: none;
+        animation: fadeIn 200ms ease;
+      }
+
+      .tab-panel[aria-hidden="false"] {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -113,28 +165,98 @@
       </div>
     </div>
 
-    <div class="trim-grid" style="max-width: 900px; margin: 20px auto 40px;">
-      <div class="trim-box">
-        <h3>GT</h3>
-        <img src="https://static.wikia.nocookie.net/beamng/images/2/21/Gt_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GT" style="width:100%; border-radius: 12px; margin-top: 10px;" />
+    <div class="trim-tabs" id="trim-tabs">
+      <div class="tab-buttons" role="tablist" aria-label="Scintilla trims">
+        <button class="tab-button" role="tab" aria-selected="true" aria-controls="panel-gt" id="tab-gt">GT</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gt-spyder" id="tab-gt-spyder">GT Spyder</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gts" id="tab-gts">GTs</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gts-spyder" id="tab-gts-spyder">GTs Spyder</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gtx" id="tab-gtx">GTx</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gtx-spyder" id="tab-gtx-spyder">GTx Spyder</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gts-corse" id="tab-gts-corse">GTs Corse</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gts-corse-spyder" id="tab-gts-corse-spyder">GTs Corse Spyder</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-velocita" id="tab-velocita">Velocità</button>
       </div>
-      <div class="trim-box">
-        <h3>GTx</h3>
-        <img src="https://static.wikia.nocookie.net/beamng/images/8/8a/Gtx_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GTx" style="width:100%; border-radius: 12px; margin-top: 10px;" />
+
+      <div class="tab-panels">
+        <section id="panel-gt" class="tab-panel" role="tabpanel" aria-labelledby="tab-gt" aria-hidden="false">
+          <h3>GT</h3>
+          <p>Base RWD coupé model with active spoiler, adaptive suspension and a naturally aspirated 5.0L V10 (factory: ~602 bhp). Suited for spirited road driving.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/2/21/Gt_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GT" />
+        </section>
+
+        <section id="panel-gt-spyder" class="tab-panel" role="tabpanel" aria-labelledby="tab-gt-spyder" aria-hidden="true" hidden>
+          <h3>GT Spyder</h3>
+          <p>Convertible version of the GT with a removable roof and a more luxurious interior; similar power and chassis tuning to the GT.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/4/41/Gt_spider_Scintilla.jpg/revision/latest?cb=20220719053138" alt="Civetta Scintilla GT Spyder" />
+        </section>
+
+        <section id="panel-gts" class="tab-panel" role="tabpanel" aria-labelledby="tab-gts" aria-hidden="true" hidden>
+          <h3>GTs</h3>
+          <p>Sportier road-going model with upgraded intake and tuning (about 652 bhp). Increased performance while remaining street legal.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/3/35/Scintilla_gts.jpg/revision/latest?cb=20220615160813" alt="Civetta Scintilla GTs" />
+        </section>
+
+        <section id="panel-gts-spyder" class="tab-panel" role="tabpanel" aria-labelledby="tab-gts-spyder" aria-hidden="true" hidden>
+          <h3>GTs Spyder</h3>
+          <p>Convertible GTs variant with similar performance figures and a premium interior.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/b/b2/Gts_spider_scintilla.jpg/revision/latest?cb=20220719053609" alt="Civetta Scintilla GTs Spyder" />
+        </section>
+
+        <section id="panel-gtx" class="tab-panel" role="tabpanel" aria-labelledby="tab-gtx" aria-hidden="true" hidden>
+          <h3>GTx</h3>
+          <p>AWD model based on the GTs using the electronic Clutchex system; combines GTs power with on-demand front drive for improved traction.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/5/5d/Gtx_scintilla.jpg/revision/latest?cb=20220719054250" alt="Civetta Scintilla GTx" />
+        </section>
+
+        <section id="panel-gtx-spyder" class="tab-panel" role="tabpanel" aria-labelledby="tab-gtx-spyder" aria-hidden="true" hidden>
+          <h3>GTx Spyder</h3>
+          <p>AWD spyder variant with luxury interior and the same AWD hardware as the GTx.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/9/9e/Gtx_spider_scintilla.jpg/revision/latest?cb=20220719054448" alt="Civetta Scintilla GTx Spyder" />
+        </section>
+
+        <section id="panel-gts-corse" class="tab-panel" role="tabpanel" aria-labelledby="tab-gts-corse" aria-hidden="true" hidden>
+          <h3>GTs Corse</h3>
+          <p>Track-focused GTs with a performance long block, fixed spoiler, upgraded brakes and suspension. Produces around 707 bhp and removes Drift mode.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/a/a6/Gts_corse_Scintilla.jpg/revision/latest?cb=20220719213224" alt="Civetta Scintilla GTs Corse" />
+        </section>
+
+        <section id="panel-gts-corse-spyder" class="tab-panel" role="tabpanel" aria-labelledby="tab-gts-corse-spyder" aria-hidden="true" hidden>
+          <h3>GTs Corse Spyder</h3>
+          <p>Spyder version of the GTs Corse: track upgrades retained but heavier due to the removable roof.</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/7/7e/Gts_corse_spider_Scintilla.jpg/revision/latest?cb=20220719213441" alt="Civetta Scintilla GTs Corse Spyder" />
+        </section>
+
+        <section id="panel-velocita" class="tab-panel" role="tabpanel" aria-labelledby="tab-velocita" aria-hidden="true" hidden>
+          <h3>Velocità</h3>
+          <p>Top-speed oriented limited model with twin-turbochargers and extended gearing for very high top speed (around 385 km/h).</p>
+          <img src="https://static.wikia.nocookie.net/beamng/images/0/03/Gts_topspeed_Scintilla.jpg/revision/latest?cb=20220719212957" alt="Civetta Scintilla Velocità" />
+        </section>
       </div>
-      <div class="trim-box">
-        <h3>GTs</h3>
-        <img src="https://static.wikia.nocookie.net/beamng/images/3/3a/Rt_Scintilla.jpg/revision/latest?cb=20220719052841" alt="Civetta Scintilla GTs" style="width:100%; border-radius: 12px; margin-top: 10px;" />
-      </div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
-      <div class="trim-box"></div>
     </div>
+
     <h1 style="text-align: center; margin-bottom: 40px;">Read our official brochure <a href="https://www.beamng.com/civetta-scintilla-brochure-small.pdf">here</a>.</h1>
+    <script>
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach((btn) => {
+            btn.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach((panel) => {
+            panel.setAttribute('aria-hidden', 'true');
+            panel.hidden = true;
+          });
+
+          button.setAttribute('aria-selected', 'true');
+          const panel = document.getElementById(button.getAttribute('aria-controls'));
+          panel.setAttribute('aria-hidden', 'false');
+          panel.hidden = false;
+          button.focus();
+        });
+      });
+    </script>
   </body>
 </html>
