@@ -7,7 +7,7 @@
       body {
         font-family: Arial, sans-serif;
         margin: 0;
-        background-image: url("https://static.wikia.nocookie.net/beamng/images/d/d1/Civetta_logo.png/revision/latest?cb=20200501195911");
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3TCusNw9rYor7j8_uDWZ8Z_GFWCfyzwYEJNCt29KbYbHn1CIOuNYXoqR&s=10");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -33,8 +33,8 @@
 
       .content {
         padding: 40px 20px;
-        background: rgba(255, 255, 255, 0.92);
-        color: #111;
+        background: skyblue;
+        color: rgb(0, 0, 0);
         margin: 20px;
         border-radius: 12px;
       }
@@ -47,11 +47,25 @@
       .section-row {
         display: grid;
         gap: 24px;
+        background: orange;
+      }
+      .section-row-2 {
+        display: grid;
+        gap: 24px;
       }
 
-      .section-row img {
+      .section-row-2 img {
         width: 100%;
         border-radius: 12px;
+      }
+
+      .legacy-content {
+        display: grid;
+        gap: 16px;
+      }
+
+      .legacy-quote-block {
+        margin-top: 8px;
       }
 
       @media (min-width: 800px) {
@@ -59,11 +73,20 @@
           grid-template-columns: 1fr 1fr;
           align-items: start;
         }
+
+        .legacy-layout {
+          grid-template-columns: 1.1fr 0.9fr;
+          align-items: start;
+        }
       }
     </style>
+    <link rel="icon" href="logo.png" type="image/png">
   </head>
   <body>
     <nav>
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
       <a href="index.html">Home</a>
       <a href="models.html">Models</a>
       <a href="about.html">About</a>
@@ -96,10 +119,21 @@
 
     <div class="content">
       <h2>The Civetta Legacy</h2>
-      <div class="section-row">
-        <div>
+      <div class="section-row-2 legacy-layout">
+        <div class="legacy-content">
           <p>At Civetta, every car is part of a legacy built on ambition and craftsmanship. We invite collectors and enthusiasts to experience the bold spirit of a brand that embraces tradition while shaping the future of performance automobiles.</p>
           <p>Explore our models to see how Civetta reinterprets Italian luxury for a modern audience.</p>
+          <div class="legacy-quote-block">
+            <h2>Famous Quotes By Antonio Civetta</h2>
+            <blockquote>
+              <h4>"Aerodynamics are for people who can't build engines."</h4>
+              <cite>- Antonio Civetta</cite>
+            </blockquote>
+            <blockquote>
+              <h4>"The car slides as if it was on ice."</h4>
+              <cite>- Antonio Civetta</cite>
+            </blockquote>
+          </div>
         </div>
         <div>
           <img src="https://static.wikia.nocookie.net/beamng/images/7/71/Screenshot_2024-11-07_13-20-47.png/revision/latest/scale-to-width-down/1000?cb=20241107123858" alt="Civetta Bolide" />

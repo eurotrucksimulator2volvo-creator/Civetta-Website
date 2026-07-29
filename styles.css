@@ -8,16 +8,28 @@ nav {
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
+  line-height: 1;
 }
 
 nav a {
   color: rgb(226, 146, 17);
   text-decoration: none;
   font-weight: bold;
+  line-height: 1;
 }
 
 nav a:hover {
   color: #3f2095;
+}
+
+nav .logo {
+  height: 24px;
+  width: 50px;
+  max-width: 50px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0;
 }
 
 .spec-list {
